@@ -1,0 +1,15 @@
+When installing a service to run under a domain user account, the account must have the right to logon as a service. This logon permission applies strictly to the local computer and must be granted in the Local Security Policy.
+
+Perform the following to edit the Local Security Policy of the computer you want to define the ‘logon as a service’ permission:
+
+Logon to the computer with administrative privileges.
+Open the Administrative Tools and open the Local Security Policy
+If the Local Security Policy is missing in your system, refer to the answer in the Where to download GPEdit.msc for Windows 10 Home? question on Microsoft Community to troubleshoot
+Expand Local Policy [Note: it's ... Policies on Win Server] and click on User Rights Assignment
+In the right pane, right-click Log on as a service and select properties.
+Click on the Add User or Group… button to add the new user.
+In the Select Users or Groups dialogue, find the user you wish to enter and click OK
+Click OK in the Log on as a service Properties to save changes.
+Then try again with the added user.
+
+– Jenkins User Handbook > Windows > Invalid service logon credentials
